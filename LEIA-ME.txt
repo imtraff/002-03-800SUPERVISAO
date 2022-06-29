@@ -1,0 +1,40 @@
+PARA USAR A FERRAMENTA SIGA ESTRITAMENTE OS PASSOS 1 A 8; EVENTUAIS PROBLEMAS SÃO ESPECÍFICADOS NOS PASSOS SEGUINTES:
+
+	1 - É um SCRIPT que roda no navegador todos os dados dos registros do contorno, para usar abra com o navegador "app_Fichas_Contorno' e abrirá como uma página WEB;
+
+	2 - NUNCA, apague ou modifique os arquivos nesta pasta, sem assistência, caso contrário O APP NÃO FUNCIONARÁ;
+
+	3 - HÁ DUAS FORMAS DE IMPORTAR OS DADOS, a partir de um CSV passo 4 e direto dos arquivos temporários do navegador 6;
+
+	4 - Para usar a partir de um CSV, selecione o arquivo desejado. Não é necessário modificar nada no CSV, para usar app, inclusive nunca apague as colunas,
+	    somente linhas de dados e valores podem ser manipulados livrementes na planilha CSV; Para gerar as fichas passo 7;
+	
+	5 - As fotos usadas tem alta resolução, então para que a aplicação não fique muito pesada e resulte em lentidão é recomendável usar cerca de 25 registros,
+	     caso contrário o tempo de geração das fichas será muito grande devido a necessidade de importar todas as fotos.
+	
+	6 - Caso seja necessário reiniciar a página, uma vez salvos os dados ficam armazenados no navegador, até que o mesmo seja fechado ou o PC desligado. Ao optar por gerar as fichas
+	    a partir desses dados, basta clicar duas vezes em gerar fichas e as fichas serão geradas automaticamente;
+
+	7 - Ao clicar em "GERAR FICHAS" APÓS escolher o CSV, todas as fichas serão geradas e configuradas automaticamente a partir do arquivo selecionado;
+	   
+
+	8 - É possível editar os campos das tabelas de dados diretamente nas fichas, basta clicar no texto e em seguida no input gerado, após digitar o texto desejado, clique ENTER para confirmar;
+
+	9 - É possível inserir dados não exibidos digitando x no input e apertando ENTER, caso hajam dados como normas não atendidas, interferencia, etc... As mesmas serão adicionadas ao texto;
+
+	10 - Ao clicar em salvar vc armazena os dados no seu navegador para gerar fichas, e os mesmos ficarão disponíveis até o navegador ser encerrado;
+
+	11 - Caso queira limpar a memoria da aplicação, é possível fazer isso clicando em limpar, ao fazer isso os dados armazenados no navegador serão apagados;
+
+	12 - Para baixar, você precisa verificar todos os fichas geradas e clicar no botão de verificado depois das fichas geradas, só assim as fichas serão preparadas para impressão ao clicar em baixar;
+
+	13 - Ao baixar será aberta uma janela de configuração de impressão, aguarde as imagens serem carregadas completamente, e após isso clique com o botão direito na janela e clique em imprimir,	
+	     ao serem exibidas as configurações de impressão aguarde a aplicação exibir as páginas impressas, esse processo tende a demorar alguns minutos quando houverem muitos registros;
+
+	14 - Para uma melhor configuração deixe as páginas em retrato, cor, tamanho A4, sem margens e com elementos de plano de fundo ativados, a impressão pode demorar alguns minutos, não feche o navegador até terminar;
+
+	15 - A formatação e estilização foi configurada para Chrome e Edge, há a possibilidade de incompatibilidade em outros navegadores, favor informar se constatar;
+
+ 	16 - Eventuais problemas de interface serão sanados posteriormente, peço paciência.
+
+	Henrique Angar - 20/04/2022

@@ -1,0 +1,57 @@
+
+.cabecalho{
+    margin: auto;
+    padding-top: 50px;
+    width: fit-content;
+}
+
+.cabecalho_img{
+    margin: auto;
+    width: fit-content;
+}
+
+.botoes_img-linha{
+
+    margin-bottom: 20px;
+}
+#botoes_img-imtraff{
+    width: 150px;
+}
+
+#botoes_img-antt{
+    max-width: 125px;
+    padding-left: 20px;
+    width: auto;
+}
+.cabecalho_botoes{
+    padding: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+#visivel{
+    position: fixed;
+    bottom:0;
+    right: 40%;
+}
+.baixar{
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+}
+
+#baixar, #importar, #salvar, #limpar, #start{
+    margin: 0 auto;
+    background-color: var(--verdeEscuro);
+    border-radius: 15%;
+    color: var(--branco);
+    font-weight: bold;
+    height: 50px;
+    width: 80px;
+    transition: 0.3s;
+}
+
+#baixar:hover, #importar:hover, #salvar:hover, #limpar:hover, #start:hover{
+    color: yellow;
+    transform: scale(1.2);
+}

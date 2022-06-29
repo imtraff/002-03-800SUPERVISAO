@@ -1,0 +1,38 @@
+:root{
+    --branco: #ffffff;
+
+    --automatico: #272727;
+
+    --verdeEscuro: #76933c;
+
+    --verdeClaro: #c4d79b;
+
+    --reprovado: #ffc7ce;
+
+    --apagado: #ebf1de;
+
+    --cinza: #808080;
+
+    --titulo: 'Calibri', sans-serif;
+
+    --texto: 'Calibri', sans-serif;
+
+    font-size: 18px;
+
+    --largura: 210mm;
+    --altura: 296.5mm;
+}
+
+body{
+    background-color: var(--branco);
+}
+
+main{
+    min-height: 49.5vh;
+    height: auto;
+}
+
+#impressao{
+    background-size: 210mm, 297mm;
+    max-width: 794px;
+}

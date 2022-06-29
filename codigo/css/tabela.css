@@ -1,0 +1,50 @@
+
+.ficha_tabela{
+
+    margin-top: 5mm;
+    max-width: 100%;
+    width: auto;
+}
+
+.ficha_tabela-estrutura{
+
+    width: 100%;
+}
+
+.ficha_tabela-linha{
+
+    border-bottom: 2px solid grey;
+    border-style: dotted;
+    max-width: 100%;
+    width: auto;
+}
+
+.ficha_tabela-celula{
+    font-size: 12px;
+    vertical-align: bottom;
+}
+
+.ficha_tabela-celula, .ficha_tabela-celulaObs{
+
+    color: var(--automatico);
+    font-family: var(--texto);
+    padding-top: 3mm;
+}
+
+.ficha_tabela-celulaVazia{
+
+    width: 50mm;
+}
+.ficha_tabela-celulaObs{
+    font-size: 12px;
+    max-width: 100%;
+    width: auto;
+}
+
+.ficha_tabela-input{
+
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}

@@ -1,0 +1,51 @@
+#corpo{
+
+    background-color: var(--verdeClaro);
+    height: auto;
+    min-height: 650px;
+    width: 100%;
+}
+
+.verificado{
+
+    margin: 20px auto;
+    position: relative;
+    right: 250px;
+    width: fit-content;
+}
+
+.verificado-sim{
+    border-radius: 5px;
+    color: var(--verdeEscuro);
+    font: var(--titulo);
+    font-weight: bold;
+    min-height: 20px;
+    min-width: 20px;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+}
+
+.verificado-nao{
+    border-radius: 5px;
+    color: red;
+    font-family: var(--titulo);
+    font-weight: bold;
+    min-height: 20px;
+    min-width: 20px;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+}
+
+.numeracao{
+
+    width: 100%;
+}
+
+.numeracao_valor{
+
+    font-size: 10mm;
+    position: relative;
+    left: 630px;
+}

@@ -1,0 +1,45 @@
+
+.ficha{
+    background-color: white;
+    height: var(--altura);
+    margin: 0 auto;
+    width: var(--largura);
+}
+
+.ficha_espaco{
+    padding: 20mm;
+}
+
+.ficha_cabecalho-logos{
+
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ficha_cabecalho-principal{
+
+    flex: 1;
+    align-self: flex-end;
+    font-size: 6mm;
+    font-family: var(--titulo);
+    text-align: center;
+}
+
+.ficha_cabecalho-titulo{
+
+    background-color: var(--verdeClaro);
+    margin-top: 4mm;
+}
+
+.ficha_cabecalho-lista{
+
+    padding: 3mm 3mm 0mm 3mm;
+}
+
+.ficha_cabecalho-linha{
+
+    color: var(--branco);
+    font-weight: bold;
+    padding-bottom: 3mm;    
+}

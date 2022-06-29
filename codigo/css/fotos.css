@@ -1,0 +1,44 @@
+.ficha_fotos-tabela, .fichas_foto-cabecalho, .fichas_foto-corpo, .ficha_fotos-celula{
+    margin-top: 5mm;
+    width: 100%;
+}
+
+.fichas_fotos{
+
+    height: 100%;
+}
+
+.fichas_fotos-corpo{
+
+    height: 100%;
+    max-height: auto;
+}
+
+.fichas_fotos-texto{
+
+    color: var(--automatico);
+    font-family: var(--titulo);
+    font-size: 3.75mm;
+}
+
+.ficha_fotos-foto1{
+    border: 2.5px solid black;
+    width: calc(210mm - 40mm);
+}
+.ficha_fotos-foto2{
+    border: 2.5px solid black; 
+    height: 100mm;
+    width: calc(210mm - 40mm);
+}
+
+.ficha_fotos-foto3{
+    border: 2.5px solid black; 
+    height: 75mm;
+    width: calc(210mm - 40mm);
+}
+
+.ficha_fotos-foto4{
+    border: 2.5px solid black; 
+    height: 80mm;
+    width: calc((210mm - 45mm)/2);
+}

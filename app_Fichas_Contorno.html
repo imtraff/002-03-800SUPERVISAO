@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
+
+    <!--ESTILOS GERAIS-->
+    <link rel="stylesheet" href="codigo/css/reset.css">
+    <link rel="stylesheet" href="codigo/css/base.css">
+
+    <!--CABECALHO-->
+    <link rel="stylesheet" href="codigo/css/cabecalho.css">
+
+    <!--FICHAS-->
+    <link rel="stylesheet" href="codigo/css/ficha.css">
+    <link rel="stylesheet" href="codigo/css/tabela.css">
+    <link rel="stylesheet" href="codigo/css/fotos.css">
+
+    <!--RODAPE-->
+    <link rel="stylesheet" href="codigo/css/corpo.css">
+
+    <title>Processador de dados</title>
+</head>
+<body onload="iniciar();">
+
+    <section id="imgs">
+        <ul class="cabecalho">
+            <li class="cabecalho_img">
+                <ul class="botoes_img-lista">
+                    <li class="botoes_img-linha"><img src="codigo/imgs/logo.JPG" id="botoes_img-imtraff"></li>
+                    <li class="botoes_img-linha"><img src="codigo/imgs/antt.png" id="botoes_img-antt"></li>
+                </ul>
+            </li>
+            <li class="cabecalho_botoes">
+                <input type="file" id = "inserir" class="cabecalho_botoes-botao">
+                <button id="importar">GERAR FICHAS</button>
+            </li>
+            <li id="aqui"></li>
+        </ul> 
+    </section>
+
+    <section id="visivel"></section>
+    
+    <section id="corpo"></section>
+
+    <div id="local"></div>
+        
+    <script src="codigo/js/botoes.js"></script>
+    <script src="codigo/js/importar.js"></script>
+    <script src="codigo/js/configurarObjetos.js"></script>
+    <script src="codigo/js/corretor.js"></script>
+    <script src="codigo/js/criarFicha.js"></script>
+    <script src="codigo/js/criarElementosFichas.js"></script>
+    <script src="codigo/js/imagens.js"></script>
+    <script src="codigo/js/armazenamento.js"></script>
+    <script src="codigo/js/inteface.js"></script>
+    <script src="codigo/js/baixar.js"></script>
+    <script src="codigo/js/main.js"></script>
+</body>
+</html>
