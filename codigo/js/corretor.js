@@ -16,7 +16,7 @@ function corrigirTexto(texto){
             default: palavra = 'Mantém'; break;
         }
 
-        console.log(palavra);
+        //console.log(palavra);
     });
 
     

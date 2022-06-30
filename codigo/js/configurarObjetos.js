@@ -11,7 +11,7 @@ function criarObjetos(dados){
             memoria.push(ocorrencia); ordem++;  
         });
         
-        return memoria;
+        //return memoria;
 }
 
 //Classe adotada para processar os dados, retorna um objeto do registro
@@ -19,7 +19,7 @@ function criarObjetos(dados){
 function objeto(info, ordem){ //console.log(info);
 
     let novas = new Array;
-    let coordenadas = info[5].split(' ');
+    let coordenadas = info[4].split(' ');
     let trecho = info[12].split(' - '); trecho = trecho[1];
 
     //quebras as coordenadas e remove os últimos digitos
@@ -30,34 +30,31 @@ function objeto(info, ordem){ //console.log(info);
         //nota, novas[0] é latitude, e novas[1] é longitude
     });
 
-    let ocorrencia = {
+    let registro = {
 
         posicao: ordem,
         codigo: info[0],
         data: info[1],
-        hora: info[3],
+        hora: info[2],
         lat: novas[0],
         long: novas[1],
-        obra: trecho,
-        km: info[14],
-        etapa: corrigirTexto(info[15]),
-        servico: corrigirTexto(info[16]),
-        percentual: info[17],
-        naNorma: verificaSituacao(info[18]),
-        erroNorma: info[19],
-        projeto: verificaSituacao(info[20]),
-        nProjeto: info[21],
-        irregularidade: info[22],
-        tipoIrregularidade: info[23],
-        interferencia: info[24],
-        tipoInt: info[25],
-        situObra: info[26].toUpperCase(info[26]),
-        obs: corrigirTexto(info[27]),
-        fotos: apenasFotos(info.slice(28,34))
+        km: info[17],
+        obs: info[24],
+        fotos: apenasFotos(info.slice(29,41)),
+        disciplina: info[11],
+        concessionaria: info[13],
+        trecho: info[14],
+        pista: info[15],
+        sentido: info[16],
+        local: info[18],
+        elemento: info[20],
+        estadoGeral: info[41],
+        ocorrencia: criaOcorrencia(info[22],info[23]),
+        per: findItemPer(info[11],criaOcorrencia(info[22],info[23])),
     }
     
-    //console.log(ocorrencia);
-    return ocorrencia;
+    //console.log(registro);
+    return registro;
 }
 
 function verificaSituacao(dado){
@@ -82,4 +79,26 @@ function apenasFotos(lista){
     }
 
     return listaFotos;
+}
+
+function criaOcorrencia(ocorrencia,outras){
+    
+    let listaOcorrencia = new Array;
+
+    if (ocorrencia != ''){
+        listaOcorrencia.push(ocorrencia);
+        listaOcorrencia.push(false);
+    }
+    else {
+        if (outras != ''){
+        listaOcorrencia.push(false);
+        listaOcorrencia.push(outras);
+        }
+        else {
+            listaOcorrencia.push(false);
+            listaOcorrencia.push('Sem dados');
+        }
+    }
+
+    return listaOcorrencia;
 }
