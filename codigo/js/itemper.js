@@ -1,18 +1,16 @@
 
 async function findItemPer(discipline,ocorr) {
 
-    let somar = false;
-
     let base = await basePer;
     
-    let findX = false; let findY= false; 
-    let sizeX = base.length; let i = 0;
+    let found = false; let i =0 
+    let size = base.length;
 
-    while(findX == false && i<sizeX){
+    while(found == false && i<size){
 
         if(base[i].disciplina == discipline){ findX = true;
 
-            let list = base[i].ocorrencia; let element = "nothing";
+            let element = false;
 
             if(ocorr[0] != false){ element = ocorr[0];
             }else{
@@ -21,11 +19,32 @@ async function findItemPer(discipline,ocorr) {
                 }else{ element = "Inexistente!";}
             }
 
-            console.log(element);
+            let result = findOcorrencia(base[i], element)
         }
-
         i++;
     }
 }
 
+let contador = 0;
 
+function findOcorrencia(object, element){
+
+    let found = false;
+    let i = 0; let j = 0;
+
+    let result = [false, false];
+    let listElement = element.split("|");
+    let listObject = Array.from(object.ocorrencia);
+
+    let sizei = listElement.length - 1;
+    let sizej = listObject.length - 1;
+
+    while( found == false && i<sizei){
+
+        while(found == false && j<sizej){ if(listElement[i] == listObject[j]){ result = [true, object.code]; found = true;} j++;}
+        if(found == false && listElement != "Sem Dados"){ console.log(listElement[i])}
+
+        i++;
+    }
+
+}

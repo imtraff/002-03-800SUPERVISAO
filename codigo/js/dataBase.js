@@ -14,6 +14,7 @@ async function importarListaPer() {
 
     const dataBase = configData(listaProcessada);
 
+    //console.log(dataBase)
     return dataBase;
 }
 
@@ -48,5 +49,5 @@ function prepareObject(values){
 function splitText(string){ 
 
     if(string == undefined || string == null || string == "-" || string =="" || string ==" "){ return "-";}
-    else{ let newText = string.split("?"); return newText;}
+    else{ let newText = string.split("|"); return newText;}
 }
