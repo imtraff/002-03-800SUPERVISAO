@@ -14,9 +14,9 @@ function criarObjetos(dados){
         //return memoria;
 }
 
+let count = 0;
 //Classe adotada para processar os dados, retorna um objeto do registro
-
-function objeto(info, ordem){ //console.log(info);
+async function objeto(info, ordem){ //console.log(info);
 
     let novas = new Array;
     let coordenadas = info[4].split(' ');
@@ -50,10 +50,9 @@ function objeto(info, ordem){ //console.log(info);
         elemento: info[20],
         estadoGeral: info[41],
         ocorrencia: criaOcorrencia(info[22],info[23]),
-        per: findItemPer(info[11],criaOcorrencia(info[22],info[23])),
+        per: await findItemPer(info[11],criaOcorrencia(info[22],info[23])),
     }
-    
-    //console.log(registro);
+
     return registro;
 }
 

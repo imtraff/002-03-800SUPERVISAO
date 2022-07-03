@@ -14,7 +14,6 @@ async function importarListaPer() {
 
     const dataBase = configData(listaProcessada);
 
-    //console.log(dataBase)
     return dataBase;
 }
 
