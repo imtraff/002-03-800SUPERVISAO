@@ -15,14 +15,15 @@ async function main(){
     generateTables(bancoDeDados);
 
     //cria os htmls das fichas
-    /* criarHTMLpagina(bancoDeDados);
+    // criarHTMLpagina(bancoDeDados);
 
-    //exporta as fichas em formato pdf
+    //dowload files
     baixar.addEventListener('click', () =>{ 
         
-        if(fichasVerificadas == true){ 
+        /*if(fichasVerificadas == true){ 
             baixarFichasPdf(bancoDeDados)
-        ;}else(alert('Opa! Você não verificou todas as fichas! Antes de baixar olhe todas, por favor!'))
-    
-    });  */
+        ;}else(alert('Opa! Você não verificou todas as fichas! Antes de baixar olhe todas, por favor!'))*/
+
+        tableDowload();
+    });
 }

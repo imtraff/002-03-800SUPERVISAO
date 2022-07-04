@@ -1,3 +1,4 @@
+//PDF register dowload code
 //Gera os arquivos pdfs das fichas e baixa os mesmos
 function baixarFichasPdf(dados){
 
@@ -68,4 +69,18 @@ function criarFichasPDF(registro){
     }
 
     return local;
+}
+
+//Excel dowload code
+
+//Generate and dowload a xlsx table from html table
+function tableDowload(){
+
+    let tables = document.getElementsByClassName("table_structure"); let size = Object.keys(tables).length; let i=0;
+
+    let table = tables[0];
+
+    let workbook = XLSX.utils.table_to_book( table, {sheet: "shit"});
+
+    XLSX.writeFile(workbook, "agrvai.xlsx")
 }

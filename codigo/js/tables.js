@@ -46,11 +46,13 @@ function mapData(list, data){ let newDataBase = new Array; let size = Object.key
 //create an array of all html tables
 function createTables(array){ let place = document.getElementById("tables");
 
-    array.forEach( dataArray =>{ let table = newTable();
+    array.forEach( dataArray =>{ 
+        
+        let table = newTable(); let body = document.createElement("tbody");
 
-        dataArray.forEach(data => { let line = newLine([false, data]); table.appendChild(line);});
+        dataArray.forEach(data => { let line = newLine([false, data]); body.appendChild(line);});
 
-        place.appendChild(table);
+        table.firstChild.appendChild(body); place.appendChild(table);
     })
 }
 
@@ -59,10 +61,21 @@ function newTable(){
 
     let html = document.createElement("div"); html.setAttribute("class", "table_box");
     let table = document.createElement("table"); table.setAttribute("class", "table_structure");
+    let thead = createHeader();
 
-    let line = newLine([true]);
+    table.appendChild(thead); html.appendChild(table); return html;
+}
 
-    table.appendChild(line); html.appendChild(table); return html;
+function createHeader(){
+
+    let header = document.createElement("thead");
+    let data = ["ITEM" , "CÓDIGO", "DATA HORA", "SENTIDO", "KM", "LOCAL","ELEMENTO", "OCORRÊNCIAS", "ITEM PER", "PROVIDÊNCIAS"];
+
+    data.forEach( column =>{
+
+        let cell = document.createElement("th"); cell.innerText = column; header.appendChild(cell);
+    });
+    return header;
 }
 
 //generate the lines of header and body
@@ -70,7 +83,7 @@ function newLine(content){ const header = content[0]; let data = new Array;
     
     let line = document.createElement("tr"); line.setAttribute("class", "table_line");
 
-    if(header){ data = ["ITEM" , "CÓDIGO", "DATA HORA", "SENTIDO", "KM", "LOCAL","ELEMENTO", "OCORRÊNCIAS", "ITEM PER", "PROVIDÊNCIAS"];
+    if(header){ ;
 
     }else{ let object = content[1];
         data = ["none", object.codigo, object.data+" "+object.hora, object.sentido, object.km, object.local, object.disciplina, object.ocorrencia, object.per, "a definir"];
