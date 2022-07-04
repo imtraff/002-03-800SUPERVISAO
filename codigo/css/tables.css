@@ -1,0 +1,16 @@
+
+.table_box{
+
+    font-family: var(--texto);
+    margin: 15px auto;
+    width: fit-content;
+}
+
+.table_column{
+
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    padding: 3px;
+}
