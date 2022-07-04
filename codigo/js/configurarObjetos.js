@@ -1,5 +1,5 @@
 // Cria e retorna coleção de objetos que serão usados para análise
-function criarObjetos(dados){
+async function criarObjetos(dados){
 
     let memoria = new Array;
     let ordem = 1;
@@ -7,11 +7,13 @@ function criarObjetos(dados){
         dados.forEach(valores => {
             
             const ocorrencia = objeto(valores, ordem);
-            
+
             memoria.push(ocorrencia); ordem++;  
         });
         
-        //return memoria;
+        memoria = await Promise.all(memoria);
+        
+        return memoria;
 }
 
 let count = 0;
@@ -50,7 +52,7 @@ async function objeto(info, ordem){ //console.log(info);
         elemento: info[20],
         estadoGeral: info[41],
         ocorrencia: criaOcorrencia(info[22],info[23]),
-        per: await findItemPer(info[11],criaOcorrencia(info[22],info[23])),
+        per:  await findItemPer(info[11],criaOcorrencia(info[22],info[23])),
     }
 
     return registro;

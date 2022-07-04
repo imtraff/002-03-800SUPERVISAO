@@ -7,8 +7,12 @@ function iniciar(){
 
 async function main(){
     
-    //importa os dados do CSV e retorna um banco de dados de objetos
-    const bancoDeDados = await obterDados();
+    //import data from CSV and generate a object array database
+    const bancoDeDados = await obterDados()
+
+    //console.log(bancoDeDados)
+    //generate all html tables
+    generateTables(bancoDeDados);
 
     //cria os htmls das fichas
     /* criarHTMLpagina(bancoDeDados);

@@ -14,9 +14,9 @@ async function obterDados(){
     
     const listaProcessada = processarValores(listaBruta);
 
-    const dadosProcessados = criarObjetos(listaProcessada);
+    const dadosProcessados = await criarObjetos(listaProcessada);
 
-    //return dadosProcessados;
+    return dadosProcessados;
 }
 
 // Recebe um texto e cria uma coleção de linhas
@@ -54,6 +54,4 @@ function processarValores(conteudo){
 
     return lista;
 }
-
-
 
