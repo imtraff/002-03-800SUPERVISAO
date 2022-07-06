@@ -3,7 +3,7 @@ const basePer = importarListaPer();
 
 async function importarListaPer() {
       
-    let arquivo = await fetch('http://127.0.0.1:5500/codigo/per.csv');
+    let arquivo = await fetch('http://127.0.0.1:5500/codigo/perLS.csv');
     const dados = await arquivo.text();
 
     const conteudo = dados.split('\n').slice(1);
@@ -22,11 +22,7 @@ function configData(data){
 
     let readyData = new Array;
 
-    data.forEach(element => {
-        
-        let object = prepareObject(element);
-        readyData.push(object);
-    });
+    data.forEach(element => { let object = prepareObject(element); readyData.push(object);});
 
     return readyData;
 }

@@ -1,9 +1,8 @@
-let contador = 0;
 
 async function findItemPer(discipline,ocorr) {
 
     let per = false;
-    let base = await basePer;
+    let base = await basePer; 
     
     let found = false; let i =0 
     let size = base.length;
@@ -32,23 +31,19 @@ async function findItemPer(discipline,ocorr) {
     if(per!=false){return per}else{ return "NE"}
 }
 
-let counter  = 0;
-
 function findOcorrencia(object, elements){
 
 
     if(elements[0] == false || elements[0]=="Sem dados"){ return "NE";}
     else{
         
-        let found = false;
-        let i = 0; let j = 0;
+        let found = false; let i = 0; let j = 0;
 
         let result = false;
         let listElement = elements;
         let listObject = Array.from(object.ocorrencia);
 
-        let sizei = listElement.length - 1;
-        let sizej = listObject.length - 1;
+        let sizei = listElement.length - 1; let sizej = listObject.length - 1;
 
         while( found == false && i<sizei){
 
@@ -57,6 +52,6 @@ function findOcorrencia(object, elements){
             i++;
         }
 
-        if(found == true){ result = object.code; return result;}else{ return result}
+        if(found == true){ result = "|"+object.code+"|"; return result;}else{ return result}
     }
 }
