@@ -31,7 +31,7 @@ async function objeto(info, ordem){ //console.log(info);
         novas.push(cord);
         //nota, novas[0] é latitude, e novas[1] é longitude
     });
-
+    
     let registro = {
 
         posicao: ordem,
@@ -48,15 +48,16 @@ async function objeto(info, ordem){ //console.log(info);
         trecho: info[14],
         pista: info[15],
         sentido: info[16],
-        local: info[18],
+        local: verifyLocal(info[18]),
         elemento: info[20],
         estadoGeral: info[41],
-        ocorrencia: criaOcorrencia(info[22],info[23]),
+        ocorrencia: removeFinal(criaOcorrencia(info[22],info[23])),
         per:  await findItemPer(info[11],criaOcorrencia(info[22],info[23])),
     }
 
     return registro;
 }
+
 
 function verificaSituacao(dado){
 
@@ -69,6 +70,8 @@ function verificaSituacao(dado){
 
     return dado;
 }
+
+function verifyLocal(local){if(local != ""){return local}else{ return "Não informado"}}
 
 function apenasFotos(lista){
 
@@ -84,10 +87,12 @@ function apenasFotos(lista){
 
 function criaOcorrencia(ocorrencia,outras){
     
+    let ocorrencias;
     let listaOcorrencia = new Array;
 
     if (ocorrencia != ''){
-        listaOcorrencia.push(ocorrencia);
+        ocorrencias = ocorrencia.split("|");
+        listaOcorrencia.push(ocorrencias);
         listaOcorrencia.push(false);
     }
     else {
@@ -102,4 +107,11 @@ function criaOcorrencia(ocorrencia,outras){
     }
 
     return listaOcorrencia;
+}
+
+function removeFinal(list){
+
+    let i = 0; let newList = new Array; let size = Object.keys(list).length;
+    for(i=0; i<size-1; i++){if(list[i] == false){newList.push("Sem dados");}else{newList.push(list[i]);}}
+    return newList;
 }
