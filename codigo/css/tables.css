@@ -6,7 +6,7 @@
     width: fit-content;
 }
 
-.table_column{
+.table_column, .table_header{
 
     border-color: black;
     border-style: solid;

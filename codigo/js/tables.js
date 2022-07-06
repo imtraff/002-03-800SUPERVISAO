@@ -73,7 +73,8 @@ function createHeader(){
 
     data.forEach( column =>{
 
-        let cell = document.createElement("th"); cell.innerText = column; header.appendChild(cell);
+        let cell = document.createElement("th"); cell.setAttribute("class", "table_header");
+        cell.innerText = column; header.appendChild(cell);
     });
     return header;
 }

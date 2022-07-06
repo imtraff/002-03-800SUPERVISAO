@@ -78,9 +78,9 @@ function tableDowload(){
 
     let tables = document.getElementsByClassName("table_structure"); let size = Object.keys(tables).length; let i=0;
 
-    let table = tables[0];
-
-    let workbook = XLSX.utils.table_to_book( table, {sheet: "shit"});
-
-    XLSX.writeFile(workbook, "agrvai.xlsx")
+    for(i=0; i<size;i++){ 
+        
+        let name = "export"+i+".xlsx"; let table = tables[i]; 
+        let wb = XLSX.utils.table_to_book(table); XLSX.writeFile(wb, name);
+    }  
 }
