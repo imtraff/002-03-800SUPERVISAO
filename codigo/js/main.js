@@ -1,7 +1,7 @@
 
 //inicia o código sem localhost ou liveserver, e insere os botoes para a sequencia
 function iniciar(){ 
-    let botao = document.getElementById('inserir');
+    let botao = document.getElementById('inserir'); importarListaPer();
     botao.addEventListener( "click", () =>{criarStart();}
     )}
 
