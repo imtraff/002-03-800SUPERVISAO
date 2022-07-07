@@ -69,7 +69,7 @@ function newTable(){
 function createHeader(){
 
     let header = document.createElement("thead");
-    let data = ["ITEM" , "CÓDIGO", "DATA HORA", "SENTIDO", "KM", "LOCAL","ELEMENTO", "OCORRÊNCIAS", "ITEM PER", "PROVIDÊNCIAS"];
+    let data = ["ITEM" , "CÓDIGO", "DATA HORA", "SENTIDO", "KM", "LOCAL","ELEMENTO", "OCORRÊNCIAS", "ITEM PER", "RESOLUÇÃO"];
 
     data.forEach( column =>{
 
@@ -87,7 +87,7 @@ function newLine(content){ const header = content[0]; let data = new Array;
     if(header){ ;
 
     }else{ let object = content[1];
-        data = ["none", object.codigo, object.data+" "+object.hora, object.sentido, object.km, object.local, object.disciplina, object.ocorrencia, object.per, "a definir"];
+        data = ["none", object.codigo, object.data+" "+object.hora, object.sentido, object.km, object.local, object.disciplina, object.ocorrencia, object.per, object.standart];
     }
 
     data.forEach(value => { let cell = newCell(value); line.appendChild(cell)});

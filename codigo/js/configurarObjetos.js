@@ -1,4 +1,4 @@
-// Cria e retorna coleção de objetos que serão usados para análise
+// Create and return an object data from da origin csv table row
 async function criarObjetos(dados){
 
     let memoria = new Array;
@@ -17,14 +17,14 @@ async function criarObjetos(dados){
 }
 
 let count = 0;
-//Classe adotada para processar os dados, retorna um objeto do registro
-async function objeto(info, ordem){ //console.log(info);
+//Chosen class to data object
+async function objeto(info, ordem){
 
     let novas = new Array;
     let coordenadas = info[4].split(' ');
     let trecho = info[12].split(' - '); trecho = trecho[1];
 
-    //quebras as coordenadas e remove os últimos digitos
+    //breaks coordinate data to a to item array
     coordenadas.forEach( eixo => { 
         
         let cord = eixo.substr(0, 13);
@@ -53,22 +53,10 @@ async function objeto(info, ordem){ //console.log(info);
         estadoGeral: info[41],
         ocorrencia: removeFinal(criaOcorrencia(info[22],info[23])),
         per:  await findItemPer(info[11],criaOcorrencia(info[22],info[23])),
+        standart: await findStandart(info[11],criaOcorrencia(info[22],info[23]))
     }
 
     return registro;
-}
-
-
-function verificaSituacao(dado){
-
-    switch(dado){
-
-        case "SIM": dado = "EM ACORDO"; break;
-        case 'NÃO': dado = "EM DESACORDO"; break;
-        default: dado = "NÃO AVALIADO"; break;
-    }
-
-    return dado;
 }
 
 function verifyLocal(local){if(local != ""){return local}else{ return "Não informado"}}
@@ -85,6 +73,7 @@ function apenasFotos(lista){
     return listaFotos;
 }
 
+//split ocorrencia column in an array of words
 function criaOcorrencia(ocorrencia,outras){
     
     let ocorrencias;
@@ -109,6 +98,7 @@ function criaOcorrencia(ocorrencia,outras){
     return listaOcorrencia;
 }
 
+//remove empity spaces from array of ocorrencias
 function removeFinal(list){
 
     let i = 0; let newList = new Array; let size = Object.keys(list).length;
